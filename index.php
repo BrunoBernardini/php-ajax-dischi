@@ -13,8 +13,6 @@ include_once __DIR__."/database.php";
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0-beta1/css/bootstrap.min.css' integrity='sha512-o/MhoRPVLExxZjCFVBsm17Pkztkzmh7Dp8k7/3JrtNCHh0AQ489kwpfA3dPSHzKDe8YCuEhxXq3Y71eb/o6amg==' crossorigin='anonymous'/>
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
   <link rel="stylesheet" href="./assets/style/style.css">
   <title>Dischi in PHP!</title>
 </head>
@@ -47,10 +45,6 @@ include_once __DIR__."/database.php";
           <span class="year"><?php echo $disc["year"] ?>}</span>
         </div>
       <?php endforeach; ?>
-      <!-- <CardItem
-      v-for="(card, index) in filteredCards"
-      :key="`card-${index}`"
-      :cardInfo="card"/> -->
     </div>
     <!-- <div v-else class="loader-container">
       <div class="lds-ripple">
@@ -59,9 +53,5 @@ include_once __DIR__."/database.php";
       </div>
     </div> -->
   </main>
-
-
-  <!-- ============== -->
-  <script src="./assets/js/script.js"></script>
 </body>
 </html>
