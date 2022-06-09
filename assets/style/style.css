@@ -1,0 +1,146 @@
+/* -----------------={GENERAL}=----------------- */
+
+body{
+  background-color: #1e2d3b;
+}
+
+img{
+  max-width: 100%;
+}
+
+header,
+.disc-card{
+  background-color: #2e3a46;
+}
+
+/* -----------------={HEADER}=----------------- */
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+  margin-bottom: 65px;
+  height: 69px;
+}
+
+header img{
+  width: 38px;
+  filter: invert(48%) sepia(71%) saturate(448%) hue-rotate(84deg) brightness(95%) contrast(91%);
+}
+
+header .select-container{
+  display: flex;
+  justify-content: space-between;
+  width: 420px;
+}
+
+header select{
+  max-width: 193px;
+}
+
+/* -----------------={MAIN}=----------------- */
+
+main.main-container{
+  padding: 0;
+}
+.cards-container{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.loader-container{
+  display: flex;
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card disco */
+
+.disc-card{
+  display: flex;
+  flex-direction: column;
+  width: 227px;
+  height: 378px;
+  margin: 0 16px 32px 16px;
+  padding: 16px;
+  text-align: center;
+}
+
+.disc-card img{
+  margin-bottom: 18px;
+  transition: all 0.15s;
+}
+
+.disc-card:hover img{
+  scale: 105%;
+}
+
+.disc-card h4{
+  color: white;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 19px;
+}
+
+.disc-card span{
+  color: gray;
+}
+
+.disc-card .author{
+  font-size: 20px;
+}
+
+/* Loader */
+
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid #31b254;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  4.9% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  5% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
