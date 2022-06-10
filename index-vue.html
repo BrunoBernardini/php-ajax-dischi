@@ -16,8 +16,24 @@
     <header>
       <img src="./assets/img/logo.svg" alt="">
       <div class="select-container">
-        <select class="form-select"></select>
-        <select class="form-select"></select>
+        <select
+          class="form-select"
+          @change="changeAuthorFilter">
+          <option selected value="">Seleziona un autore</option>
+          <option
+            v-for="author in authors"
+            :value="author">
+            {{author}}</option>
+        </select>
+        <select
+          class="form-select"
+          @change="changeGenreFilter">
+          <option selected value="">Seleziona un genere</option>
+          <option
+            v-for="genre in genres"
+            :value="genre">
+            {{genre}}</option>
+        </select>
         <!-- <SelectComp 
           :options="filters.authors"
           type="autore"
@@ -31,30 +47,30 @@
   
     <!-- MAIN -->
     <main class="container main-container">
-      <div class="cards-container">
+      <div
+        v-if="isLoaded"
+        class="cards-container">
         <div
           v-for="disc in discs"
           class="disc-card">
           <img
-            :src="disc.poster" :alt="`Title: ${disc.title}; Genre: ${disc.genre}`">
+            :src="disc.poster"
+            :alt="`Title: ${disc.title}; Genre: ${disc.genre}`">
           <h4>{{disc.title}}</h4>
           <span class="author">{{disc.author}}</span>
           <span class="year">{{disc.year}}</span>
         </div>
-        <!-- <CardItem
-        v-for="(card, index) in filteredCards"
-        :key="`card-${index}`"
-        :cardInfo="card"/> -->
       </div>
-      <!-- <div v-else class="loader-container">
+      <div
+        v-else
+        class="loader-container">
         <div class="lds-ripple">
           <div></div>
           <div></div>
         </div>
-      </div> -->
+      </div>
     </main>
   </div>
-
 
   <!-- ============== -->
   <script src="./assets/js/script.js"></script>

@@ -37,7 +37,7 @@ include_once __DIR__."/database.php";
   <!-- MAIN -->
   <main class="container main-container">
     <div class="cards-container">
-      <?php foreach($db["response"] as $disc): ?>
+      <?php foreach($db as $disc): ?>
         <div class="disc-card">
           <img src="<?php echo $disc["poster"] ?>" alt="`Title: <?php echo $disc["title"] ?>; Genre: <?php echo $disc["genre"] ?>`">
           <h4><?php echo $disc["title"] ?></h4>
